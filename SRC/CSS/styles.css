@@ -908,9 +908,6 @@ nav{
         gap: 1rem;
     }
 
-    .popular-cards{
-        gap: 1rem;
-    }
 
     .p-card{
         gap: 1rem;
@@ -1030,20 +1027,20 @@ nav{
     .down .hover-over i{
         font-size: 6rem;
     }
-     .popular-cards, .highrated-cards{
+     .popular-cards{
         width: 90%;
-        padding: 1rem;
+        gap: 1rem;
+        /* padding: 1rem; */
     }
 
-    .p-card, .high-card, .k-card, .f-card, b-card{
-        padding: 1rem;
+    .p-card{
         /* border: 2px solid red; */
-        width: 50%;
+        width: 53%;
     }
     
     .popular-head{
         margin-top: 5rem;
-        padding: 1rem;
+        /* padding: 1rem; */
     }
 
     .card-detail{
