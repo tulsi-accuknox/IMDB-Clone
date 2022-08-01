@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDB</title>
+
+    <!-- ///////////////////////// FAVICON ////////////////////// -->
+    <link
+      rel="shortcut icon"
+      href="/SRC/images/logos/imdb.png"
+      type="image/x-icon"
+    />
+
+    <!-- ///////////////////////// CSS ////////////////////// -->
+    <link rel="stylesheet" href="/SRC/CSS/styles.css" />
+
+    <!-- /////////////////////////BOXICON////////////////////// -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ///////////////////////// SWIPER ////////////////////// -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- ///////////////////////// NAVIGATIONBAR ////////////////////// -->
+    <nav>
+      <div class="navbar">
+        <div class="left">
+          <img src="/SRC/images/logos/imdb.png" alt="logo" />
+
+          <div class="menu-btn btn-hover">
+            <span class="star">
+              <i class="bx bx-menu"></i>
+              <h3>MENU</h3>
+            </span>
+          </div>
+        </div>
+
+        <div class="form">
+          <!--search-container -->
+          <div class="input-container">
+            <input type="text" placeholder="Search IMDB" id="movie-search-box" onkeyup="findMovies()"/>
+            <div class="search-list " id="search-list">
+              <!-- <div class="search-list-item">
+                <img src="/SRC/images/cover/marvel-desktop.jpg" alt="" />
+                <div class="search-item-info">
+                  <h3>Marvels</h3>
+                  <p>2017</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      
+
+        <div class="right">
+          <div class="watchlist btn-hover">
+            <span class="star">
+              <i class="bx bxs-bookmark-heart"></i>
+              <h3>Watchlist</h3>
+            </span>
+          </div>
+
+          <div class="sign-in btn-hover">
+            <h3><span class="star">Sign In</span></h3>
+          </div>
+
+          <div class="language btn-hover">
+            <span class="star">
+              <h3>EN</h3>
+              <i class="bx bx-globe"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- /* ////////////////////// SECTION -COVER //////////////////////////  -->
+
+    <section class="cover">
+      <div class="swiper container-swiper">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide cover-section">
+            <div class="up">
+              <img src="/SRC/images/cover/marvel-desktop.jpg" alt="" />
+            </div>
+
+            <div class="down">
+              <div class="btn-play hover-over">
+                <i class="bx bx-play-circle"></i>
+              </div>
+              <div class="image-description hover-over">
+                <h1>All About the Marvel Cinematic Universe: Phase 5</h1>
+
+                <p>Sequels, Spin-Offs, New Series, and More</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide cover-section">
+            <div class="up">
+              <img src="/SRC/images/cover/blackpanther-desktop.jpg" alt="" />
+            </div>
+
+            <div class="down">
+              <div class="btn-play hover-over">
+                <i class="bx bx-play-circle"></i>
+              </div>
+              <div class="image-description hover-over">
+                <h1>'Black Panther: Wakanda Forever'</h1>
+
+                <p>Watch the Comic-Con Trailer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide cover-section">
+            <div class="up">
+              <img src="/SRC/images/cover/jonwick-desktop.jpg" alt="" />
+            </div>
+
+            <div class="down">
+              <div class="btn-play hover-over">
+                <i class="bx bx-play-circle"></i>
+              </div>
+              <div class="image-description hover-over">
+                <h1>'John Wick 4' Sneak Peek</h1>
+
+                <p>Watch the Comic-Con Trailer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide cover-section">
+            <div class="up">
+              <img src="/SRC/images/cover/pinoccio-desktop.jpg" alt="" />
+            </div>
+
+            <div class="down">
+              <div class="btn-play hover-over">
+                <i class="bx bx-play-circle"></i>
+              </div>
+              <div class="image-description hover-over">
+                <h1>'Guillermo del Toro's Pinocchio'</h1>
+
+                <p>Watch the New Trailer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide cover-section">
+            <div class="up">
+              <img src="/SRC/images/cover/ringsofpower-desktop.jpg" alt="" />
+            </div>
+
+            <div class="down">
+              <div class="btn-play hover-over">
+                <i class="bx bx-play-circle"></i>
+              </div>
+              <div class="image-description hover-over">
+                <h1>'The Lord of the Rings: The Rings of Power'</h1>
+
+                <p>Watch the Official San Diego Comic-Con Trailer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide cover-section">
+            <div class="up">
+              <img src="/SRC/images/cover/lordofrings-desktop.jpg" alt="" />
+            </div>
+
+            <div class="down">
+              <div class="btn-play hover-over">
+                <i class="bx bx-play-circle"></i>
+              </div>
+              <div class="image-description hover-over">
+                <h1>"The Lord of the Rings"</h1>
+
+                <p>Watch Trailer Now</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev arrow" id="swiper-navBtn" ></div>
+        <div class="swiper-button-next arrow" id="swiper-navBtn" ></div>
+      </div>
+    </section>
+
+    <!-- /* ////////////////////// SECTION -POPULAR//////////////////////////  -->
+
+    <section class="popular">
+      <div class="popular-head">
+        <div class="p-heading">
+          <h1>Popular Movies</h1>
+          <i class="bx bx-chevrons-right"></i>
+        </div>
+        <p>Popular TV shows and movies just for you</p>
+      </div>
+
+      <div class="popular-cards">
+        <div class="p-card">
+          <div class="p-card-img">
+            <img src="/SRC/images/top-picks/p-card-img.jpg" alt="" />
+          </div>
+          <div class="card-detail">
+            <div class="p-star">
+              <div class="p-p-star">
+                <i class="bx bxs-star"></i>
+                <p>8.8</p>
+              </div>
+              <span class="star">
+                <i class="bx bx-star"></i>
+              </span>
+            </div>
+
+            <div class="p-movie">
+              <a href="#">The Lord of Rings: The Two Towers</a>
+            </div>
+
+            <div class="p-btn">
+              <a href="#">Watch options</a>
+            </div>
+
+            <div class="p-trailer">
+              <div class="trailer-btn star">
+                <i class="bx bxs-right-arrow"></i>
+                <p>Trailer</p>
+              </div>
+              <div class="trailer-info star">
+                <i class="bx bx-info-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ////////////////////// SECTION - HIGH RATED//////////////////////////  -->
+
+    <section class="popular">
+      <div class="popular-head">
+        <div class="p-heading">
+          <h1>High Rated Movies</h1>
+          <i class="bx bx-chevrons-right"></i>
+        </div>
+        <p>Most high rated movies just for you</p>
+      </div>
+
+      <div class="popular-cards highrated-cards">
+        <div class="p-card high-card">
+          <div class="p-card-img">
+            <img src="/SRC/images/top-picks/p-card-img.jpg" alt="" />
+          </div>
+          <div class="card-detail">
+            <div class="p-star">
+              <div class="p-p-star">
+                <i class="bx bxs-star"></i>
+                <p>8.8</p>
+              </div>
+              <span class="star">
+                <i class="bx bx-star"></i>
+              </span>
+            </div>
+
+            <div class="p-movie">
+              <a href="#">The Lord of Rings: The Two Towers</a>
+            </div>
+
+            <div class="p-btn">
+              <a href="#">Watch options</a>
+            </div>
+
+            <div class="p-trailer">
+              <div class="trailer-btn star">
+                <i class="bx bxs-right-arrow"></i>
+                <p>Trailer</p>
+              </div>
+              <div class="trailer-info star">
+                <i class="bx bx-info-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ////////////////////// SECTION - KIDS FAVOURITE//////////////////////////  -->
+
+    <section class="popular">
+      <div class="popular-head">
+        <div class="p-heading">
+          <h1>Kid's Favourite</h1>
+          <i class="bx bx-chevrons-right"></i>
+        </div>
+        <p>Shows and Movies that kids like the most</p>
+      </div>
+
+      <div class="popular-cards kids-cards">
+        <div class="p-card k-card">
+          <div class="p-card-img">
+            <img src="/SRC/images/top-picks/p-card-img.jpg" alt="" />
+          </div>
+          <div class="card-detail">
+            <div class="p-star">
+              <div class="p-p-star">
+                <i class="bx bxs-star"></i>
+                <p>8.8</p>
+              </div>
+              <span class="star">
+                <i class="bx bx-star"></i>
+              </span>
+            </div>
+
+            <div class="p-movie">
+              <a href="#">The Lord of Rings: The Two Towers</a>
+            </div>
+
+            <div class="p-btn">
+              <a href="#">Watch options</a>
+            </div>
+
+            <div class="p-trailer">
+              <div class="trailer-btn star">
+                <i class="bx bxs-right-arrow"></i>
+                <p>Trailer</p>
+              </div>
+              <div class="trailer-info star">
+                <i class="bx bx-info-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ////////////////////// SECTION - FANS FAVOURITE//////////////////////////  -->
+
+    <section class="popular">
+      <div class="popular-head">
+        <div class="p-heading">
+          <h1>Fan Favrouties</h1>
+          <i class="bx bx-chevrons-right"></i>
+        </div>
+        <p>This week's TV shows and Movies just for you</p>
+      </div>
+
+      <div class="popular-cards fan-cards">
+        <div class="p-card f-card">
+          <div class="p-card-img">
+            <img src="/SRC/images/top-picks/p-card-img.jpg" alt="" />
+          </div>
+          <div class="card-detail">
+            <div class="p-star">
+              <div class="p-p-star">
+                <i class="bx bxs-star"></i>
+                <p>8.8</p>
+              </div>
+              <span class="star">
+                <i class="bx bx-star"></i>
+              </span>
+            </div>
+
+            <div class="p-movie">
+              <a href="#">The Lord of Rings: The Two Towers</a>
+            </div>
+
+            <div class="p-btn">
+              <a href="#">Watch options</a>
+            </div>
+
+            <div class="p-trailer">
+              <div class="trailer-btn star">
+                <i class="bx bxs-right-arrow"></i>
+                <p>Trailer</p>
+              </div>
+              <div class="trailer-info star">
+                <i class="bx bx-info-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ////////////////////// SECTION - BEST THIS YEAR//////////////////////////  -->
+
+    <section class="popular">
+      <div class="popular-head">
+        <div class="p-heading">
+          <h1>Best this Year</h1>
+          <i class="bx bx-chevrons-right"></i>
+        </div>
+        <p>Best TV shows and Movies just for you</p>
+      </div>
+
+      <div class="popular-cards best-cards">
+        <div class="p-card b-card">
+          <div class="p-card-img">
+            <img src="/SRC/images/top-picks/p-card-img.jpg" alt="" />
+          </div>
+          <div class="card-detail">
+            <div class="p-star">
+              <div class="p-p-star">
+                <i class="bx bxs-star"></i>
+                <p>8.8</p>
+              </div>
+              <span class="star">
+                <i class="bx bx-star"></i>
+              </span>
+            </div>
+
+            <div class="p-movie">
+              <a href="#">The Lord of Rings: The Two Towers</a>
+            </div>
+
+            <div class="p-btn">
+              <a href="#">Watch options</a>
+            </div>
+
+            <div class="p-trailer">
+              <div class="trailer-btn star">
+                <i class="bx bxs-right-arrow"></i>
+                <p>Trailer</p>
+              </div>
+              <div class="trailer-info star">
+                <i class="bx bx-info-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <button class="btn">Sign in for more access</button>
+
+      <div class="social">
+        <ul>
+          <li class="social_link star">
+            <a href=""><i class="bx bxl-facebook-square"></i></a>
+          </li>
+          <li class="social_link star">
+            <a href=""><i class="bx bxl-instagram"></i></a>
+          </li>
+          <li class="social_link star">
+            <a href=""><i class="bx bxl-twitch"></i></a>
+          </li>
+          <li class="social_link star">
+            <a href=""><i class="bx bxl-twitter"></i></a>
+          </li>
+          <li class="social_link star">
+            <a href=""><i class="bx bxl-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li>Get the IMDB app<i class="bx bx-link-external"></i></li>
+          <li>Help<i class="bx bx-link-external"></i></li>
+          <li>Site Index<i class="bx bx-link-external"></i></li>
+          <li>IMDbPro<i class="bx bx-link-external"></i></li>
+          <li>Box Office Mojo<i class="bx bx-link-external"></i></li>
+          <li>IMDb Developer<i class="bx bx-link-external"></i></li>
+        </ul>
+
+        <ul>
+          <li>Press Room</li>
+          <li>Advertising<i class="bx bx-link-external"></i></li>
+          <li>Jobs<i class="bx bx-link-external"></i></li>
+          <li>Conditions of Use</li>
+          <li>Privacy Policy</li>
+          <li>Interest-Based Ads<i class="bx bx-link-external"></i></li>
+        </ul>
+
+        <ul>
+          <li>an<i class="bx bxl-amazon"></i>company</li>
+        </ul>
+
+        <ul>
+          <li><i class="bx bx-copyright"></i>1990-2022 by IMDb.com, Inc.</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- ///////////////////////// SCRIPT.JS ////////////////////// -->
+    <script src="/SRC/script.js"></script>
+
+    <!-- ///////////////////////// SWIPER ////////////////////// -->
+    <!-- <script src="SRC/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
